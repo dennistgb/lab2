@@ -1,5 +1,6 @@
 import math
-print("ET0735 (DevOps for AIoT) - Lab 2 - Introduction to Python")
+from statistics import median
+
 def main():
     print("ET0735 (DevOps for AIoT) - Lab 2 - Introduction to Python")
     display_main_menu()
@@ -9,7 +10,6 @@ def main():
     print(calc_min_max_temperature(num_list))
     median_temp(num_list)
     
-
 
 def display_main_menu():
     print("Enter some numbers separated by commas (e.g. 5, 67, 32)")
@@ -36,16 +36,5 @@ def calc_min_max_temperature(num_list):
 
 def median_temp(num_list):
     new_list=[eval(i) for i in num_list]
-    new_list = num_list.sort()
-    print(f"new list = {new_list}")
-    length = len(num_list)/2
-    if len(num_list) % 2 == 0:
-        print("even")
-        mvalue1 = num_list[length]
-        mvalue2 = num_list[length + 1]
-        print(f"median = {(mvalue1 + mvalue1) / 2}")
-    else:
-        print("odd")
-        print(f"median = {num_list[math.trunc(length)]}")
+    return median(new_list)
 
-main()
