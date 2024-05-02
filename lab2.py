@@ -35,7 +35,7 @@ def calc_min_max_temperature(num_list):
     return min_max
 
 def median_temp(num_list):
-    print(num_list)
+    new_list=[eval(i) for i in num_list]
     new_list = num_list.sort()
     print(f"new list = {new_list}")
     length = len(num_list)/2
